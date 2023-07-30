@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Varada's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e9d3cbd8d4.js" crossorigin="anonymous"></script>
+    <!-- <link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
+</head>
+
+<body>
+    <div id="portfolio-header">
+        <div id="container">
+            <nav>
+                <img src="Assets/logo copy.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html#header">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ------------ Portfolio-Section -------------- -->
+
+    <div id="portfolio-section">
+        <div class="container">
+            <div class="youtube-video">
+                <h2>My 3D Animation and VFX Demoreel</h2>
+                <iframe src="https://www.youtube.com/embed/FnvMJBQAqh0" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="portfolio-list">
+                <div>
+                    <h2>Full Illustrations</h2>
+                    <img src="Assets/Completed Digital Paintings/Ninqualm Final.jpg">
+                    <img src="Assets/Completed Digital Paintings/Chibi Ninqu.jpg">
+                    <img src="Assets/Completed Digital Paintings/Elf woman Color.jpg">
+                </div>
+                <div>
+                    <h2>Digital Line-arts</h2>
+                    <img src="Assets/Completed Digital Paintings/Ninqualm-Gif-attempt.gif">
+                    <img src="Assets/Work in Progress Digital Paintings/Ninqu.jpg">
+                    <img src="Assets/Work in Progress Digital Paintings/Klovia Progress 4.jpg">
+                </div>
+                <div>
+                    <h2>Weapon Designs</h2>
+                    <img src="Assets/Tattoo Sketches/Greatsword.jpg">
+                    <img src="Assets/Tattoo Sketches/Droma Matt DND Sword.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------Contact--------------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> pradyumdesikan@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +1 226-700-5813</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://discord.gg/w4hBURaErZ"><i class="fa-brands fa-discord"></i></a>
+                        <a href="https://www.linkedin.com/in/vdesikan/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="Assets/Developer Resume of Varadarajan Desikan.pdf" download class="btn btn2">Download my
+                        Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Varadarajan Desikan. Made from scratch and with <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxK3YOsU4MywSJ7xkq6NXgZo_w-P3BzDKow4uCqMccRo5x9ROjwXtWECsv8VgBszsUwDA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully!"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>
