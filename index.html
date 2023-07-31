@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Varada's Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e9d3cbd8d4.js" crossorigin="anonymous"></script>
+    <!-- <link rel="icon" href="./favicon.ico" type="image/x-icon"> -->
+</head>
+
+<body>
+    <div id="header">
+        <div id="container">
+            <nav>
+                <img src="Assets/logo copy.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Varada</span></h1>
+                <p>VFX Veteran, Commission Artist,<br>CSR extraordinaire, and Web Developer.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------ ABOUT -------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Assets/HQ convention photo.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Hey there! I'm Varadarajan Desikan, a Visual Effects wizard turned passionate Customer Service
+                        Representative. With a dash of quirkiness and a whole lot of professionalism, I've journeyed
+                        through diverse industries, leaving my mark along the way.
+                        <br><br>
+                        As a Customer Service Representative, I flawlessly managed over 3500 orders in a month and
+                        maintained top-notch customer satisfaction. As an Office Coordinator at Siva Home Health, I
+                        orchestrated schedules, client bookings, and communications with finesse.
+                        <br><br>
+                        In the realm of visual effects, my talents shine as a Freelance Compositor and Element QC
+                        Artist. I have worked on blockbuster movies, ensuring impeccable quality and optimization.
+                        <br><br>
+                        Armed with a Visual Effects degree and certifications in Azure, Test Automation, and Python,
+                        I merge creativity with technical prowess.
+                        <br><br>
+                        Connect with me on LinkedIn or leave me a message down below in the contact form to know more
+                        about me, or better yet, Hire me! Let's create something amazing together!
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Post Production for Visual Media</span><br>Video and Audio Editing, Compositing,
+                                3D modelling and Animation, and 3D Spacing</li>
+                            <li><span>Digital Painting</span><br>Custom 2D Digital artworks. Full Illustrations or Line
+                                Art</li>
+                            <li><span>Customer Service Skills</span><br>4+ years of experience in Customer Service with
+                                demonstrably exceptional skills in Conflict Resolution</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023/05 - 2023/06</span><br>Customer Service Representative at GlassFrogBooks.inc
+                            </li>
+                            <li><span>2021/06 - 2023/03</span><br>Office Coordinator at Siva Home Health</li>
+                            <li><span>2019/10 - 2021/03</span><br>Customer Service Representative at
+                                Millennium1Solutions</li>
+                            <li><span>2018/11 - 2029/01</span><br>Freelance Compositor at VideoNerve Studio</li>
+                            <li><span>2015/10 - 2018/05</span><br>Depth and Element QC Artist at Stereo D Ltd.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023/02</span><br>Certification - Microsoft Certified: Azure Fundamentals</li>
+                            <li><span>2022/06</span><br>Online Course - Web Development and JavaScript at Udemy Online
+                            </li>
+                            <li><span>2014/04</span><br>Post Graduate Program - Visual Effects and Editing from Fanshawe
+                                College</li>
+                            <li><span>2012/04</span><br>Bachelor's Degree - B.Sc Visual Communication from DDGD
+                                Vaishnava College, India</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------Services--------------------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h2>VFX and Compositing</h2>
+                    <p>Having worked in over 25 movies and a TV show, I'm pretty confident in my Visual Effects and
+                        Compositing skills. I have stepped away from the Entertainment industry as a full time pursuit
+                        but I'm open to freelance gigs that interests me.</p>
+                    <a href="https://www.imdb.com/name/nm9817804/">My Movie Credits</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-palette"></i>
+                    <h2>2D and 3D Artworks</h2>
+                    <p>I do private commissions for individuals to digitally paint and render their original, fictional
+                        characters, props or weapons. (World of Warcraft, Final Fantasy 14 Online and Dungeons and
+                        Dragons).</p>
+                    <a href="#portfolio">Check out my works down below</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Beginner on the path of mastering HTML, CSS and JavaScript in addition to learning the backend of
+                        Web development. I did put together this website, didn't I? If you have a vision for a website,
+                        I can build it.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------Portfolio--------------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Assets/Robot_render_AdobeExpress.gif"><br>
+                    <img src="Assets/Interior_Render_AdobeExpress.gif">
+                    <div class="layer">
+                        <h3>3D Modelling and Animation</h3>
+                        <p>Animated renders of my Combat Robot Mech Suit and 3D Modelling of a Bedroom</p>
+                        <a href="myworks.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Assets/Completed Digital Paintings/Ninqualm Final.jpg">
+                    <div class="layer">
+                        <h3>Digital Painting</h3>
+                        <p>Self-commissioned artwork of my World of Warcraft character</p>
+                        <a href="myworks.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Assets/Work in Progress Digital Paintings/Ninqu.jpg">
+                    <div class="layer">
+                        <h3>Digital Line-work</h3>
+                        <p>Pinup style Line-art illustration of my Final Fantasy 14 character</p>
+                        <a href="myworks.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="myworks.html" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-- ---------------------------Contact--------------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> pradyumdesikan@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +1 226-700-5813</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://discord.gg/w4hBURaErZ"><i class="fa-brands fa-discord"></i></a>
+                        <a href="https://www.linkedin.com/in/vdesikan/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="Assets/Developer Resume of Varadarajan Desikan.pdf" download class="btn btn2">Download my
+                        Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Varadarajan Desikan. Made from scratch with <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxK3YOsU4MywSJ7xkq6NXgZo_w-P3BzDKow4uCqMccRo5x9ROjwXtWECsv8VgBszsUwDA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully!"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>
